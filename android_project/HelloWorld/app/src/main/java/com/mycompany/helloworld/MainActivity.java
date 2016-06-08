@@ -11,7 +11,8 @@ public class MainActivity extends AppCompatActivity {
 
     private HelloWorld helloWorldInterface;
 
-    static {
+    static
+    {
         System.loadLibrary("gnustl_shared");
         System.loadLibrary("helloworld");
     }

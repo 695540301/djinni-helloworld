@@ -22,11 +22,12 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		2C7547DEAFFF54A3F90AD884 /* NativeHelloWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 807B3C32F2CD2DD6B0E49846 /* NativeHelloWorld.cpp */; };
-		3BF0C83A421B008B0CD266AD /* djinni_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13B25165D8F4AF2C6CEA4FDD /* djinni_main.cpp */; };
+		45FFCA28BDEEE6567A8B90CC /* djinni_main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 13B25165D8F4AF2C6CEA4FDD /* djinni_main.cpp */; };
 		705E18FD1417E21BB5CCDDC5 /* libdjinni_jni.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A90FE96571004152C0D23D70 /* libdjinni_jni.a */; };
-		B8835587947E2A84D5789020 /* HWHelloWorld+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 93EF3C6F21A261CD73E92BF3 /* HWHelloWorld+Private.mm */; };
-		C21BC3B28740A519A1E249F0 /* hello_world_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DBBD1D234653B189BD2BE251 /* hello_world_impl.cpp */; };
+		7C2B88DDF89C4D63316C7907 /* HWHelloWorld+Private.mm in Sources */ = {isa = PBXBuildFile; fileRef = 93EF3C6F21A261CD73E92BF3 /* HWHelloWorld+Private.mm */; };
+		D6690478B01D529DF7A3F654 /* hello_world_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70C455387B6026A8A84DD02D /* hello_world_impl.cpp */; };
+		E1A6CB1197B9B21717092AC2 /* NativeHelloWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 807B3C32F2CD2DD6B0E49846 /* NativeHelloWorld.cpp */; };
+		E1B168C043D391C8B932D4E1 /* hello_world_impl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70C455387B6026A8A84DD02D /* hello_world_impl.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,12 +71,12 @@
 /* Begin PBXFileReference section */
 		0467E5039F6B955D767C8C5E /* libhelloworld.gyp */ = {isa = PBXFileReference; explicitFileType = sourcecode; path = libhelloworld.gyp; sourceTree = "<group>"; };
 		13B25165D8F4AF2C6CEA4FDD /* djinni_main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = djinni_main.cpp; sourceTree = "<group>"; };
+		70C455387B6026A8A84DD02D /* hello_world_impl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hello_world_impl.cpp; sourceTree = "<group>"; };
 		807B3C32F2CD2DD6B0E49846 /* NativeHelloWorld.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NativeHelloWorld.cpp; sourceTree = "<group>"; };
 		83F05D594EC1E8C7A1CCF331 /* support_lib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = support_lib.xcodeproj; path = "build_ios/deps/djinni/support-lib/support_lib.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		93EF3C6F21A261CD73E92BF3 /* HWHelloWorld+Private.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "HWHelloWorld+Private.mm"; sourceTree = "<group>"; };
 		9D1CE9F830AD5E7C79A102CE /* libhelloworld_jni.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libhelloworld_jni.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA2A013990A2965A3D2F3073 /* common.gypi */ = {isa = PBXFileReference; explicitFileType = sourcecode; name = common.gypi; path = deps/djinni/common.gypi; sourceTree = "<group>"; };
-		DBBD1D234653B189BD2BE251 /* hello_world_impl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hello_world_impl.cpp; sourceTree = "<group>"; };
 		E030FBE45CC880055C7BD4E8 /* libhelloworld_objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libhelloworld_objc.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,7 +110,7 @@
 		0C262977B5BD1DAC1DD7EC38 = {
 			isa = PBXGroup;
 			children = (
-				C2A13BCDE14FB2EF466B31BE /* Source */,
+				911ED8706F1CD58D5991B63F /* Source */,
 				27E8AC21F86A75AA339BB448 /* Projects */,
 				B4C261F34F337F4D8310759B /* Products */,
 				FC74AB431434A753C9A1AB2F /* Build */,
@@ -124,12 +125,22 @@
 			name = Projects;
 			sourceTree = "<group>";
 		};
-		9866D49EE1E66DBFB4C2BFF0 /* src */ = {
+		55562500CAD3B7A79DBAD056 /* src/cpp */ = {
 			isa = PBXGroup;
 			children = (
-				DBBD1D234653B189BD2BE251 /* hello_world_impl.cpp */,
+				70C455387B6026A8A84DD02D /* hello_world_impl.cpp */,
 			);
-			path = src;
+			path = src/cpp;
+			sourceTree = "<group>";
+		};
+		911ED8706F1CD58D5991B63F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D49B016DDB4F79DFDEA40691 /* deps/djinni/support-lib/jni */,
+				9FA2DB762502A7A56BDA9B8D /* generated-src */,
+				55562500CAD3B7A79DBAD056 /* src/cpp */,
+			);
+			name = Source;
 			sourceTree = "<group>";
 		};
 		9FA2DB762502A7A56BDA9B8D /* generated-src */ = {
@@ -165,16 +176,6 @@
 				807B3C32F2CD2DD6B0E49846 /* NativeHelloWorld.cpp */,
 			);
 			path = jni;
-			sourceTree = "<group>";
-		};
-		C2A13BCDE14FB2EF466B31BE /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				D49B016DDB4F79DFDEA40691 /* deps/djinni/support-lib/jni */,
-				9FA2DB762502A7A56BDA9B8D /* generated-src */,
-				9866D49EE1E66DBFB4C2BFF0 /* src */,
-			);
-			name = Source;
 			sourceTree = "<group>";
 		};
 		D49B016DDB4F79DFDEA40691 /* deps/djinni/support-lib/jni */ = {
@@ -280,8 +281,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8835587947E2A84D5789020 /* HWHelloWorld+Private.mm in Sources */,
-				C21BC3B28740A519A1E249F0 /* hello_world_impl.cpp in Sources */,
+				7C2B88DDF89C4D63316C7907 /* HWHelloWorld+Private.mm in Sources */,
+				D6690478B01D529DF7A3F654 /* hello_world_impl.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,8 +290,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BF0C83A421B008B0CD266AD /* djinni_main.cpp in Sources */,
-				2C7547DEAFFF54A3F90AD884 /* NativeHelloWorld.cpp in Sources */,
+				45FFCA28BDEEE6567A8B90CC /* djinni_main.cpp in Sources */,
+				E1A6CB1197B9B21717092AC2 /* NativeHelloWorld.cpp in Sources */,
+				E1B168C043D391C8B932D4E1 /* hello_world_impl.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,8 +337,7 @@
 				HEADER_SEARCH_PATHS = (
 					"generated-src/jni",
 					"generated-src/cpp",
-					"handwritten-src/jni",
-					"handwritten-src/cpp",
+					src/cpp,
 					"deps/djinni/support-lib/jni",
 				);
 				ONLY_ACTIVE_ARCH = YES;
@@ -361,7 +362,7 @@
 				HEADER_SEARCH_PATHS = (
 					"generated-src/objc",
 					"generated-src/cpp",
-					src,
+					src/cpp,
 					"deps/djinni/support-lib/objc",
 				);
 				OTHER_CFLAGS = "-Wall";
@@ -385,8 +386,7 @@
 				HEADER_SEARCH_PATHS = (
 					"generated-src/jni",
 					"generated-src/cpp",
-					"handwritten-src/jni",
-					"handwritten-src/cpp",
+					src/cpp,
 					"deps/djinni/support-lib/jni",
 				);
 				OTHER_CFLAGS = "-Wall";
@@ -425,7 +425,7 @@
 				HEADER_SEARCH_PATHS = (
 					"generated-src/objc",
 					"generated-src/cpp",
-					src,
+					src/cpp,
 					"deps/djinni/support-lib/objc",
 				);
 				ONLY_ACTIVE_ARCH = YES;

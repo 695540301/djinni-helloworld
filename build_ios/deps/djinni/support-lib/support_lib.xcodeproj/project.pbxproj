@@ -22,9 +22,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		0E05170E2871493F27C8A350 /* djinni_support.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B3D1EE88C5B7125B011AF85 /* djinni_support.cpp */; };
-		9A46A3CC5BDB7BF55F5A3713 /* DJIError.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA4A5F2B5DA9526CE98EAA1F /* DJIError.mm */; };
-		B6079CB1CE87742F92E40203 /* DJIWeakPtrWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = CD978F9BC2FA0AC68E89BC6D /* DJIWeakPtrWrapper.mm */; };
+		1465507D28AC3B4438BE0EA7 /* DJIError.mm in Sources */ = {isa = PBXBuildFile; fileRef = AA4A5F2B5DA9526CE98EAA1F /* DJIError.mm */; };
+		3D0DD92E0DA9E7620DBBE8C6 /* djinni_support.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2B3D1EE88C5B7125B011AF85 /* djinni_support.cpp */; };
+		4C19D073ED4917A20A86AC4C /* DJIProxyCaches.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D7661E0B4E11C97EB08AD6B /* DJIProxyCaches.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,11 +46,20 @@
 
 /* Begin PBXFileReference section */
 		0C99AA4F95316AA552A79C55 /* libdjinni_objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libdjinni_objc.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		231EDA826E7FF219E5DBB49A /* DJIMarshal+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DJIMarshal+Private.h"; sourceTree = "<group>"; };
 		2B3D1EE88C5B7125B011AF85 /* djinni_support.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = djinni_support.cpp; sourceTree = "<group>"; };
+		397A54B09BAAE8A8099375C1 /* djinni_support.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = djinni_support.hpp; sourceTree = "<group>"; };
+		513575C986B18A6779586498 /* DJIObjcWrapperCache+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DJIObjcWrapperCache+Private.h"; sourceTree = "<group>"; };
 		598CA4F1D57C5CC2F74BC407 /* common.gypi */ = {isa = PBXFileReference; explicitFileType = sourcecode; name = common.gypi; path = ../common.gypi; sourceTree = "<group>"; };
+		6DA7FB71EA3788684CB4802D /* DJIError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJIError.h; sourceTree = "<group>"; };
+		714AD6FEC1228A45AF87154F /* proxy_cache_impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = proxy_cache_impl.hpp; sourceTree = "<group>"; };
 		822DF8C93ACCBB4C2A0B4484 /* support_lib.gyp */ = {isa = PBXFileReference; explicitFileType = sourcecode; path = support_lib.gyp; sourceTree = "<group>"; };
+		91E765E2E8529A2F289E1290 /* DJICppWrapperCache+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DJICppWrapperCache+Private.h"; sourceTree = "<group>"; };
+		9C34C68EF2E307D02DE07C86 /* djinni_common.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = djinni_common.hpp; sourceTree = "<group>"; };
+		9D7661E0B4E11C97EB08AD6B /* DJIProxyCaches.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DJIProxyCaches.mm; sourceTree = "<group>"; };
+		A4350A127B83DBCA1FD32E1E /* Marshal.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = Marshal.hpp; sourceTree = "<group>"; };
+		A76054AB1F1A10122531B737 /* proxy_cache_interface.hpp */ = {isa = PBXFileReference; lastKnownFileType = text; path = proxy_cache_interface.hpp; sourceTree = "<group>"; };
 		AA4A5F2B5DA9526CE98EAA1F /* DJIError.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DJIError.mm; sourceTree = "<group>"; };
-		CD978F9BC2FA0AC68E89BC6D /* DJIWeakPtrWrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DJIWeakPtrWrapper.mm; sourceTree = "<group>"; };
 		DC658C749F521B13A5BDCBBC /* libdjinni_jni.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libdjinni_jni.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,27 +84,10 @@
 		0FFDE03E1D942ADADB44E055 = {
 			isa = PBXGroup;
 			children = (
-				BAD81E1C3E461ECC066A779F /* Source */,
+				FD686FA7781BDB7E9ECA8E65 /* Source */,
 				7929D5A2C732827149CDB2BF /* Products */,
 				7640A6A6C4BB98445619845E /* Build */,
 			);
-			sourceTree = "<group>";
-		};
-		4C99F3A32C175441EF365D93 /* jni */ = {
-			isa = PBXGroup;
-			children = (
-				2B3D1EE88C5B7125B011AF85 /* djinni_support.cpp */,
-			);
-			path = jni;
-			sourceTree = "<group>";
-		};
-		647021EBFD66E368AEC68CDF /* objc */ = {
-			isa = PBXGroup;
-			children = (
-				AA4A5F2B5DA9526CE98EAA1F /* DJIError.mm */,
-				CD978F9BC2FA0AC68E89BC6D /* DJIWeakPtrWrapper.mm */,
-			);
-			path = objc;
 			sourceTree = "<group>";
 		};
 		7640A6A6C4BB98445619845E /* Build */ = {
@@ -116,11 +108,37 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BAD81E1C3E461ECC066A779F /* Source */ = {
+		DC86AEDC8DF8576ABB91C8E2 /* jni */ = {
 			isa = PBXGroup;
 			children = (
-				4C99F3A32C175441EF365D93 /* jni */,
-				647021EBFD66E368AEC68CDF /* objc */,
+				A4350A127B83DBCA1FD32E1E /* Marshal.hpp */,
+				2B3D1EE88C5B7125B011AF85 /* djinni_support.cpp */,
+				397A54B09BAAE8A8099375C1 /* djinni_support.hpp */,
+			);
+			path = jni;
+			sourceTree = "<group>";
+		};
+		DCF165FF1A6736E4F7408091 /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				91E765E2E8529A2F289E1290 /* DJICppWrapperCache+Private.h */,
+				6DA7FB71EA3788684CB4802D /* DJIError.h */,
+				AA4A5F2B5DA9526CE98EAA1F /* DJIError.mm */,
+				231EDA826E7FF219E5DBB49A /* DJIMarshal+Private.h */,
+				513575C986B18A6779586498 /* DJIObjcWrapperCache+Private.h */,
+				9D7661E0B4E11C97EB08AD6B /* DJIProxyCaches.mm */,
+			);
+			path = objc;
+			sourceTree = "<group>";
+		};
+		FD686FA7781BDB7E9ECA8E65 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DC86AEDC8DF8576ABB91C8E2 /* jni */,
+				DCF165FF1A6736E4F7408091 /* objc */,
+				9C34C68EF2E307D02DE07C86 /* djinni_common.hpp */,
+				714AD6FEC1228A45AF87154F /* proxy_cache_impl.hpp */,
+				A76054AB1F1A10122531B737 /* proxy_cache_interface.hpp */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -187,7 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E05170E2871493F27C8A350 /* djinni_support.cpp in Sources */,
+				3D0DD92E0DA9E7620DBBE8C6 /* djinni_support.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,8 +213,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6079CB1CE87742F92E40203 /* DJIWeakPtrWrapper.mm in Sources */,
-				9A46A3CC5BDB7BF55F5A3713 /* DJIError.mm in Sources */,
+				1465507D28AC3B4438BE0EA7 /* DJIError.mm in Sources */,
+				4C19D073ED4917A20A86AC4C /* DJIProxyCaches.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
